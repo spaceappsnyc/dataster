@@ -1,11 +1,11 @@
 import React from "react";
 import { Map, TileLayer } from "react-leaflet";
+import PropTypes from "prop-types";
 
-const position = [1.2911, 103.6436];
-export const DeviceMap = () => {
+export const DeviceMap = props => {
   return (
     <div style={{ width: "inherit", height: "inherit" }}>
-      <Map center={position} zoom={10}>
+      <Map center={props.position} zoom={10}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -13,4 +13,8 @@ export const DeviceMap = () => {
       </Map>
     </div>
   );
+};
+
+DeviceMap.propTypes = {
+  position: PropTypes.array
 };
