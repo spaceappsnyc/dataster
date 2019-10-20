@@ -73,12 +73,13 @@ export const NavDrawer = () => {
       }}
     >
       <List>
-        <h3>Updates</h3>
+        <h3>Messages</h3>
 
         <Divider />
         {districtJSONData.map(item => {
           return (
             <div>
+
               <ListItem button>
                 <SimpleModal
                   type={item.Type}
